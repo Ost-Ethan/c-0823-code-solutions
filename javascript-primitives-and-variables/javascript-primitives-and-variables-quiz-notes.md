@@ -10,13 +10,15 @@ After completing this exercise, you should be able to discuss or answer the foll
 
 - How do you **declare** a variable?
 
-  Using an = sign to give a value to a variable.
+  with the keywords let, const, or var and then the variable name before the assignment (=) operator
 
 - How do you initialize (**assign a value to**) a variable?
 
-  with the keywords let, const, or var and then the variable name before the assignment (=) operator
+  Using an = sign to give a value to a variable.
 
 - What characters are allowed in variable names?
+
+  Letters, Numbers, and \_ and $ signs. Varibles can't begin with a number
 
 - What does it mean to say that variable names are "case sensitive"?
 
@@ -51,11 +53,11 @@ After completing this exercise, you should be able to discuss or answer the foll
   to understand what varibles are being assigned correctly, and more easily debug code
 
 - Give five examples of JavaScript primitives.
-  let burger = "king";
-  let democracy = true;
-  let numberOfAnts = 1000;
-  let darkness;
-  let flyingPig = Null;
+  let burger = "king"; String
+  let democracy = true; Boolean
+  let numberOfAnts = 1000; Number
+  let darkness; undefined
+  let flyingPig = Null; Null
 
 ## Notes
 
