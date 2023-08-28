@@ -1,14 +1,11 @@
 const width = 3;
 const height = 9;
-
 const area = width * height;
-
 console.log('Value of area: ', area);
 console.log('typeof area is ', typeof area);
 
 const bill = 40;
 const payment = 100;
-
 const change = payment - bill;
 console.log('Value of change: ', change);
 console.log('Type of change is', typeof change);
@@ -16,7 +13,6 @@ console.log('Type of change is', typeof change);
 const quizzes = 7;
 const midterm = 9;
 const final = 13;
-
 const grade = (midterm + quizzes + final) / 3;
 console.log('Value of grade: ', grade);
 console.log('Type of grade is ', typeof grade);
@@ -37,6 +33,8 @@ const isSparta = headcount === 300;
 console.log('Value of isSparta: ', isSparta);
 console.log('Type of isSparta is', typeof isSparta);
 
-const motto = fullName + ' is the GOAT';
+let motto = fullName;
+motto += ' is the GOAT'; // Unsure if this was wanted in the console.log method or not, hope this is okay.
+
 console.log('Value of motto is ', motto);
 console.log('Type of motto is ', typeof motto);
