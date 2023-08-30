@@ -28,9 +28,9 @@ console.log('value of jimmy:', jimmy);
 console.log('value of lewis:', lewis);
 function isUnderFive(number) {
   if (number < 5) {
-    console.log('True');
+    return true;
   } else {
-    console.log('False');
+    return false;
   }
 }
 
@@ -49,9 +49,8 @@ function isEven(number) {
 function startsWithJ(string) {
   const firstLetter = string.charAt(0);
 
-  console.log('The first letter of this string is: ', firstLetter);
-  if (firstLetter === 'j' || firstLetter === 'J') {
-    console.log('The first letter of the string is j!');
+  if (firstLetter === 'J') {
+    console.log('The first letter of the string is J!');
     return true;
   } else {
     console.log('The first letter of the string is ', firstLetter, ', not J.');
