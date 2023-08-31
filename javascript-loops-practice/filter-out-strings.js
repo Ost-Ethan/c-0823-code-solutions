@@ -4,11 +4,7 @@ function filterOutStrings(values) {
   for (let i = 0; i < values.length; i++) {
     const typeOfValue = typeof values[i];
 
-    if (
-      typeOfValue === 'number' ||
-      typeOfValue === 'null' ||
-      typeOfValue === 'object'
-    ) {
+    if (typeOfValue !== 'string') {
       filteredStrings.push(values[i]);
     }
   }

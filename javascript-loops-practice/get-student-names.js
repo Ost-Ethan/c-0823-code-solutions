@@ -2,9 +2,8 @@
 function getStudentNames(students) {
   const nameArray = [];
 
-  for (const keys in students) {
-    //  console.log("value of keys:", students[keys].name);
-    nameArray.push(students[keys].name);
+  for (let i = 0; i < students.length; i++) {
+    nameArray.push(students[i].name);
   }
   return nameArray;
 }
