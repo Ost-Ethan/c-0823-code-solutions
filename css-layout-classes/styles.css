@@ -3,13 +3,11 @@
   margin-left: auto;
   margin-right: auto;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.row {
-  display: flex;
-  flex-basis: auto;
-}
-
-.column {
-  flex-basis: auto;
+.item {
+  width: 100%;
+  align-self: flex-end;
 }
