@@ -1,12 +1,46 @@
+* {
+  background-color: #1996da;
+}
+
 .container {
   display: flex;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .row {
   display: flex;
+  width: 100%;
+}
+
+.column-max {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
 }
 
 .row-column {
   display: flex;
   flex-direction: column;
+  flex-basis: calc(100% / 3);
+}
+
+.graphics {
+  width: 50%;
+  padding: 50px;
+  border-style: hidden;
+  border-radius: 75px;
+  background-color: white;
+}
+
+.sub-header {
+  font-family: sans-serif;
+}
+
+.sub-body {
+  font-family: sans-serif;
 }
