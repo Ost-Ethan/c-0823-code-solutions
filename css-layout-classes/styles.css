@@ -4,10 +4,12 @@
   margin-right: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-.item {
-  width: 100%;
-  align-self: flex-end;
+.row {
+  display: flex;
+}
+
+.column {
+  flex-basis: calc(100% / 2);
 }
