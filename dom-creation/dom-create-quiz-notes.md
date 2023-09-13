@@ -5,7 +5,10 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - Does the `document.createElement()` method insert a new element into the page?
-  no, it only creates one
+
+      text character
+      no, it only creates one
+
 - How do you add an element as a child to another element?
   node.appendchild()
 - What do you pass as the arguments to the `element.setAttribute()` method?
