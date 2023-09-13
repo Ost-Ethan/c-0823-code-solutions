@@ -3,7 +3,7 @@ const $contactForm = document.querySelector('#contact-form');
 function handleSubmit(event) {
   event.preventDefault();
 
-  const formValues = [];
+  const formValues = {};
   formValues.email = $contactForm.elements.email.value;
   formValues.message = $contactForm.elements.message.value;
   formValues.name = $contactForm.elements.name.value;
