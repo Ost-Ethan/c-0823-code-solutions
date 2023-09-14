@@ -16,7 +16,7 @@ function renderPokemon(pokemon) {
   $pokeNameH2.textContent = pokemon.name;
   $pokeNumberH3.textContent = pokemon.number;
   $pokeDescriptionP.textContent = pokemon.description;
-
+  console.log('woo');
   $columnDiv.appendChild($pokeCardDiv);
   $pokeCardDiv.appendChild($pokeImageImg);
   $pokeCardDiv.appendChild($cardTextDiv);
