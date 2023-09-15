@@ -18,16 +18,19 @@ const bookArray = [
   },
 ];
 
-console.log('Value of bookArray:', bookArray);
-console.log('typeof bookArray', typeof bookArray);
+console.log('Value of bookArray: ', bookArray);
+console.log('typeof bookArray: ', typeof bookArray);
 
 const jsonBookArray = JSON.stringify(bookArray);
 
-console.log('typeof bookArray after json.stringify', typeof jsonBookArray);
+console.log('typeof bookArray after json.stringify: ', typeof jsonBookArray);
+console.log('Value of bookArray after json.stringify: ', jsonBookArray);
 
-const jsonstring = '{ "id": "123", "name": "Jimmy"}';
+const jsonString = '{ "id": "123", "name": "Jimmy"}';
 
-console.log('typeof jsonstring', typeof jsonstring);
+console.log('typeof jsonstring: ', typeof jsonString);
+console.log('Value of jsonString: ', jsonString);
 
-const stringObject = JSON.parse(jsonstring);
-console.log('typeof stringObject', typeof stringObject);
+const stringObject = JSON.parse(jsonString);
+console.log('typeof stringObject: ', typeof stringObject);
+console.log('Value of stringObject: ', stringObject);
