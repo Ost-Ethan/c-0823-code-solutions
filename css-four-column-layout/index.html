@@ -6,6 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Four Column Layout</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="header font-barlow">How It works</div>
+      </div>
+      <div class="row">
+        <div class="four-column font-barlow">
+          <div class="column-one-fourth">
+            <img class="image" src="images/screen-1.png" alt="screen 1" />
+            <img class="logo" src="images/switch-icon.png" alt="switch icon" />
+            <div class="label">App Switching</div>
+            <div class="description">Toggles all your apps on and off.</div>
+          </div>
+          <div class="column-one-fourth">
+            <img class="image" src="images/screen-2.png" alt="screen 2" />
+            <img class="logo" src="images/filter-icon.png" alt="filter icon" />
+            <div class="label">Trip Filtering</div>
+            <div class="description">Evaluates your trip requests.</div>
+          </div>
+          <div class="column-one-fourth">
+            <img class="image" src="images/screen-3.png" alt="screen 3" />
+            <img class="logo" src="images/slider-icon.png" alt="slider icon" />
+            <div class="label">Service Filters</div>
+            <div class="description">Accepts only your ideal trips.</div>
+          </div>
+          <div class="column-one-fourth">
+            <img class="image" src="images/screen-4.png" alt="screen 4" />
+            <img class="logo" src="images/bars-icon.png" alt="bars-icon" />
+            <div class="label">Stats + Mileage</div>
+            <div class="description">Tracks your trips across all apps.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
