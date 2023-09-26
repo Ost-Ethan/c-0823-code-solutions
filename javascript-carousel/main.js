@@ -33,6 +33,15 @@ function pictureSwapHandler(event) {
   }
 }
 
+// render the given picture based on pictureNMum
+function renderPicture(pictureNum) {
+  bulletfilled(pictureNum);
+  $selectedImage.setAttribute('src', pictureArray[pictureNum - 1]);
+  currentListedPicture = pictureNum;
+  clearInterval(counterInterval);
+  counterInterval = setInterval(imageTimeSwitch, 3000);
+}
+
 // Switch the image if 3 seconds has passed.
 function imageTimeSwitch() {
   currentListedPicture++;
@@ -42,15 +51,6 @@ function imageTimeSwitch() {
   }
   bulletfilled(currentListedPicture);
   renderPicture(currentListedPicture);
-}
-
-// render the given picture based on pictureNMum
-function renderPicture(pictureNum) {
-  bulletfilled(pictureNum);
-  $selectedImage.setAttribute('src', pictureArray[pictureNum - 1]);
-  currentListedPicture = pictureNum;
-  clearInterval(counterInterval);
-  counterInterval = setInterval(imageTimeSwitch, 3000);
 }
 
 const $pictureContainer = document.querySelector('.picture-container');
