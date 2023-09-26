@@ -9,7 +9,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What property of JavaScript functions can store shared behavior for instances created with `new`?
   the prototype property
 - What does the `instanceof` operator do?
-  returns a true or false
+  returns a true or false if the varible is constructed by the given constructor
 
 ## Notes
 
