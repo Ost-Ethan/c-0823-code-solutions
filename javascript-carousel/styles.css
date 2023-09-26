@@ -1,0 +1,32 @@
+.container {
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column-max {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.picture-container {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border-style: hidden;
+  height: 4rem;
+  background-color: white;
+  width: 4rem;
+  padding: 1rem;
+}
+
+.bullet {
+  margin: 0.5rem 0.25rem;
+}
