@@ -5,18 +5,6 @@ class Shape {
     this.area = area;
   }
 
-  setArea(area) {
-    area = this.area;
-  }
-
-  getPerimeter() {
-    return this.perimeter;
-  }
-
-  setPerimeter(perimeter) {
-    perimeter = this.perimeter;
-  }
-
   describe(Shape) {
     return `This shape has a perimeter of ${this.perimeter} and an area of ${this.area}.`;
   }
