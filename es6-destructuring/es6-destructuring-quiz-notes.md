@@ -7,10 +7,11 @@ After completing this exercise, you should be able to discuss or answer the foll
 - What is destructuring, conceptually?
   Destructuring is the assignment of object properties to a variable.
 - What is the syntax for `Object` destructuring?
-  let { property1: variable1, property2: variable2 } = object;
+  const { property: variable} = object;
 - What is the syntax for `Array` destructuring?
-
+  const [ var1, var2, var3] = arrayInQuestion;
 - How can you tell the difference between destructuring and creating `Object`/`Array` literals?
+  Destructuring an object requrires curly brackets and a property name, while destructuring an array requires square brackets and variables based on indexes
 
 ## Notes
 
