@@ -43,7 +43,7 @@ After completing this exercise, you should be able to discuss or answer the foll
   - When does the arrow function's code get executed?
     when bar is called
 - How does the value of `this` differ between standard functions and arrow functions?
-  this should not be used as a method of an object in an arrow function.
+  this should not be used to get an object, or as a method of an object, instead 'this' in an arrow function returns the whole window
 
 ## Notes
 
