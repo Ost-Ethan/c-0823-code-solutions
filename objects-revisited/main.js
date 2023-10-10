@@ -27,7 +27,6 @@ function addWeekends() {
   const { daysOpen, employees } = business;
   daysOpen.push('Sat');
   daysOpen.unshift('Sun');
-  console.log('employees', employees[0]);
   for (const workers in employees) {
     if (employees[workers].daysOfWeekWorking.includes('Sat') === false) {
       employees[workers].daysOfWeekWorking.push('Sat');
@@ -54,54 +53,74 @@ function addEmployees() {
     employees[xhr.response[3].name] = xhr.response[3];
     employees[xhr.response[3].name].position = 'Trash Collector';
 
-    // Give Each new employee 1 to 5 weekday workdays at random, everyone will be scheduled to work weekends
-    // For each Employee
-
-    // For loop that determines how many days are worked with a random number, randomNumberOfDays, and then chooses strings randomly for the length of randomNumberOfDays using the variable randomDaysWorked, then sets that array of strings as the .daysOfWeekWorking property for each employee that doesn't have a defined .daysOfWeekWorking property.
-    for (const days in employees) {
-      // Generate a number of days worked
-      const randomDaysSelected = [];
-      const randomNumberOfDays = Math.floor(Math.random() * 5) + 1;
-      const numbersGenerated = [];
-      for (let a = 0; a < randomNumberOfDays; a++) {
-        const randomDaysWorked = Math.floor(Math.random() * 5) + 1;
-        if (numbersGenerated.includes(randomDaysWorked) === false) {
-          switch (randomDaysWorked) {
-            case 1:
-              randomDaysSelected.push('M');
-              break;
-            case 2:
-              randomDaysSelected.push('Tu');
-              break;
-            case 3:
-              randomDaysSelected.push('W');
-              break;
-            case 4:
-              randomDaysSelected.push('Th');
-              break;
-            case 5:
-              randomDaysSelected.push('F');
-          }
-          numbersGenerated.push(randomDaysWorked);
-        }
-      }
-
-      if (employees[days].daysOfWeekWorking === undefined) {
-        randomDaysSelected.push('Sat');
-        randomDaysSelected.push('Sun');
-        employees[days].daysOfWeekWorking = randomDaysSelected;
-      }
-    }
-    // Gives Each employee a fullTime property if they work more than 5 days a week.
-    for (const keys in employees) {
-      if (employees[keys].daysOfWeekWorking.length >= 5) {
-        employees[keys].fullTime = true;
-      } else {
-        employees[keys].fullTime = false;
-      }
-    }
+    applyWorkingDays(employees);
+    updateTotalEmployees(employees);
   });
 }
 
-addWeekends();
-addEmployees();
+function applyWorkingDays(employees) {
+  // Give Each new employee 1 to 5 weekday workdays at random, everyone will be scheduled to work weekends
+  // For each Employee
+
+  // For loop that determines how many days are worked with a random number, randomNumberOfDays, and then chooses strings randomly for the length of randomNumberOfDays using the variable randomDaysWorked, then sets that array of strings as the .daysOfWeekWorking property for each employee that doesn't have a defined .daysOfWeekWorking property.
+  for (const days in employees) {
+    // Generate a number of days worked
+    const randomDaysSelected = [];
+    const randomNumberOfDays = Math.floor(Math.random() * 5) + 1;
+    const numbersGenerated = [];
+    for (let a = 0; a < randomNumberOfDays; a++) {
+      const randomDaysWorked = Math.floor(Math.random() * 5) + 1;
+      if (numbersGenerated.includes(randomDaysWorked) === false) {
+        switch (randomDaysWorked) {
+          case 1:
+            randomDaysSelected.push('M');
+            break;
+          case 2:
+            randomDaysSelected.push('Tu');
+            break;
+          case 3:
+            randomDaysSelected.push('W');
+            break;
+          case 4:
+            randomDaysSelected.push('Th');
+            break;
+          case 5:
+            randomDaysSelected.push('F');
+        }
+        numbersGenerated.push(randomDaysWorked);
+      }
+    }
+
+    if (employees[days].daysOfWeekWorking === undefined) {
+      randomDaysSelected.push('Sat');
+      randomDaysSelected.push('Sun');
+      employees[days].daysOfWeekWorking = randomDaysSelected;
+    }
+  }
+}
+
+function updateTotalEmployees(employees) {
+  // Gives Each employee a fullTime property if they work more than 5 days a week. Also counts the employees and reassigns the totalEmployees variable.
+  business.totalEmployees = 0;
+  for (const keys in employees) {
+    business.totalEmployees += 1;
+    if (employees[keys].daysOfWeekWorking.length >= 5) {
+      employees[keys].fullTime = true;
+    } else {
+      employees[keys].fullTime = false;
+    }
+  }
+}
+
+function deleteEmployee(employeeName) {
+  const { employees } = business;
+  delete employees[employeeName];
+  updateTotalEmployees(employees);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  addWeekends();
+  updateTotalEmployees(business.employees);
+  addEmployees(business.employees);
+  deleteEmployee('Jumbo');
+});
