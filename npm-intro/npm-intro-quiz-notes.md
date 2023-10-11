@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - What is NPM?
-
+  Node Package Manager
 - What is a package?
   reusable shared code
 - What are some other popular package managers?
