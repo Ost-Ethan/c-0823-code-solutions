@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  min-width: 100vw;
+  justify-content: center;
+  align-content: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.typing-text {
+  font-size: 50px;
+}
+
+.right-letter {
+  color: lime;
+}
+
+.wrong-letter {
+  color: red;
+}
+
+.selected-letter {
+  border-bottom: solid;
+}
