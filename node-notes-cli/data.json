@@ -1,0 +1,11 @@
+{
+  "nextId": 39,
+  "notes": {
+    "11": "Burger King",
+    "32": "In JavaScript, the value of `this` is determined when a function is called; not when it is defined.",
+    "34": "A closure is formed when a function retains access to variables in its lexical scope.",
+    "36": "Red Robin",
+    "37": "Red Robin2",
+    "38": "Red Robin2"
+  }
+}
