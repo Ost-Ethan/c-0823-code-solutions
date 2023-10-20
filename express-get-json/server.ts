@@ -27,13 +27,15 @@ const grades: Record<number, Grade> = {
     score: 92,
   },
 };
-const gradesArray: Grade[] = [];
-for (const info in grades) {
-  gradesArray.push(grades[info]);
-}
+
 const app = express();
 
 app.get('/api/grades', (req, res) => {
+  const gradesArray: Grade[] = [];
+  for (const info in grades) {
+    gradesArray.push(grades[info]);
+  }
+
   console.log(req.method);
   res.json(gradesArray);
 });
