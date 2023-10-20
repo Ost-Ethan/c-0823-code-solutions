@@ -40,7 +40,7 @@ app.get('/api/grades', (req, res) => {
 });
 
 app.delete('/api/grades/:id', (req, res) => {
-  const delId: number = Number(req.params.id);
+  const delId = Number(req.params.id);
   if (grades[delId]) {
     delete grades[delId];
     console.log('Deleted entry in grades at index:', req.params.id);
