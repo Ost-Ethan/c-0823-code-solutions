@@ -6,7 +6,7 @@ type buttonProp = {
 function ClickyButton({ text, onClick }: buttonProp) {
   return (
     <>
-      <button onClick={() => onClick()}>{text}</button>
+      <button onClick={onClick}>{text}</button>
     </>
   );
 }

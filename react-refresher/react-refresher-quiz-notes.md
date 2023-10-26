@@ -21,7 +21,7 @@ After completing this exercise, you should be able to discuss or answer the foll
 - How do you handle events in React?
   with an event handler function in the component, while the event listener isd applied in markup to elements, with terms like "onClick" = handleClick running the handleclick when the element is clicked.
 - How do you let a parent component know that an event happened?
-  by passing it a prop
+  by placing an event handler on the parent componenet?
 
 ## Notes
 
