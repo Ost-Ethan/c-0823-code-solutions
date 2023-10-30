@@ -1,24 +1,43 @@
-import { useState } from 'react';
+import { ChangeEvent, useState } from 'react';
+import { ImCross, ImCheckmark } from 'react-icons/im';
+import './ValidatedInput.css';
 
 export default function ValidatedInput() {
   const [password, setPassword] = useState('');
+  const [errorText, setErrorText] = useState('A password is required.');
+  const [statusIcon, setStatusIcon] = useState(
+    <ImCross className="wrong-input" />
+  );
 
-  function handleValidation() {
-    setPassword(password);
-    // check to see if input is valid\
+  function handleValidation(e: ChangeEvent<HTMLInputElement>) {
+    if (e.currentTarget.value === '') {
+      setErrorText('A password is required.');
+      setStatusIcon(<ImCross className="wrong-input" />);
+    } else if (e.currentTarget.value.length < 8) {
+      setErrorText('Your password is too short.');
+      setStatusIcon(<ImCross className="wrong-input" />);
+    } else {
+      setErrorText('');
+      setStatusIcon(<ImCheckmark className="right-input" />);
+      console.log('passed error checks');
+    }
+
     console.log('changed');
   }
 
   return (
-    <form>
+    <div>
       <label htmlFor="password">Password:</label>
       <input
-        onChange={handleValidation}
         value={password}
+        onChange={(e) => {
+          setPassword(e.target.value), handleValidation(e);
+        }}
         name="password"
         type="text"
       />
-      <span></span>
-    </form>
+      <span className="icon">{statusIcon}</span>
+      <div className="wrong-input">{errorText}</div>
+    </div>
   );
 }
