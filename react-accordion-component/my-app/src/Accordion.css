@@ -1,0 +1,21 @@
+.hidden {
+  display: none;
+}
+
+.title {
+  margin: 0.25rem 0.5rem;
+  background-color: white;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: gray;
+  color: black;
+}
+
+.container {
+  background-color: white;
+  padding: 5rem;
+}
+
+.information {
+  color: black;
+}
