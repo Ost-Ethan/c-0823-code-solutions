@@ -23,7 +23,7 @@ export function List() {
       }
     }
     readItemsOnMount();
-  }, [isLoading]);
+  }, []);
 
   if (isLoading) {
     return <div>Loading...</div>;

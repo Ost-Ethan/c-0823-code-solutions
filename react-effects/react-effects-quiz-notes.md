@@ -5,7 +5,7 @@
 After completing this exercise, you should be able to discuss or answer the following questions:
 
 - When is a component "mounted" to the DOM?
-  aftter its first render
+  after its first render
 - What is a React Effect?
   an effect is code that is triggered after every render of the component
 - When should you use an Effect and when should you not use an Effect?
